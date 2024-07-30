@@ -1,5 +1,16 @@
 {
     "require": {
         "nesbot/carbon": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "FoodItems\\": "FoodItems/",
+            "FoodOrders\\": "FoodOrders/",
+            "Invoices\\": "Invoices/",
+            "Persons\\": "Persons/",
+            "Persons\\Employees\\": "Persons/Employees/",
+            "Persons\\Customers\\": "Persons/Customers/",
+            "Restaurants\\": "Restaurants/"
+        }
     }
 }

@@ -1,4 +1,14 @@
 <?php
+
+namespace Restaurants;
+
+use FoodItems\FoodItem;
+use Persons\Employees\Employee;
+use Persons\Employees\Cashier;
+use Persons\Employees\Chef;
+use Invoices\Invoice;
+use Exception;
+
 class Restaurant {
     /** @var FoodItem[] */
     private array $menu;
@@ -20,13 +30,20 @@ class Restaurant {
     }
 
     /**
+     * @return FoodItem[]
+     */
+    public function getMenu(): array {
+        return $this->menu;
+    }
+
+    /**
      * @return Employee[]
      */
     public function getEmployees(): array {
         return $this->employees;
     }
 
-    public function getEmployeeByRole(string $role): ?Emplayee {
+    public function getEmployeeByRole(string $role): ?Employee {
         foreach($this->employees as $employee) {
             if ($employee instanceof $role) {
                 return $employee;
@@ -35,14 +52,11 @@ class Restaurant {
         return null;
     }
 
-    /**
-     * @param string[]
-     */
-    public function order(array $categories): Invoice {
-        $foodItem = array_filter($this->menu, fn(FoodItem $items) => $items::getCategory() === $categories);
+    public function order(string $category): Invoice {
+        $foodItems = array_filter($this->menu, fn(FoodItem $item) => $item::getCategory() === $category);
 
-        if (empty($foodItem)) {
-            throw new Exception("{$categories}というカテゴリーのメニューはありません。");
+        if (empty($foodItems)) {
+            throw new Exception("{$category}というカテゴリーのメニューはありません。");
         }
 
         $cashier = $this->getEmployeeByRole(Cashier::class);

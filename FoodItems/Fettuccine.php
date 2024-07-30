@@ -1,5 +1,8 @@
 <?php
-class Fettuccine extends FoodItems {
+
+namespace FoodItems;
+
+class Fettuccine extends FoodItem {
     const CATEGORY = 'Fettuccine';
 
     public function __construct() {

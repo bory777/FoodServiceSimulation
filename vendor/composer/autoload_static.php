@@ -22,9 +22,25 @@ class ComposerStaticInit889f831e09da48cb8affe8b66f071284
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Clock\\' => 24,
         ),
+        'R' => 
+        array (
+            'Restaurants\\' => 12,
+        ),
         'P' => 
         array (
             'Psr\\Clock\\' => 10,
+            'Persons\\Employees\\' => 18,
+            'Persons\\Customers\\' => 18,
+            'Persons\\' => 8,
+        ),
+        'I' => 
+        array (
+            'Invoices\\' => 9,
+        ),
+        'F' => 
+        array (
+            'FoodOrders\\' => 11,
+            'FoodItems\\' => 10,
         ),
         'C' => 
         array (
@@ -54,9 +70,37 @@ class ComposerStaticInit889f831e09da48cb8affe8b66f071284
         array (
             0 => __DIR__ . '/..' . '/symfony/clock',
         ),
+        'Restaurants\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Restaurants',
+        ),
         'Psr\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
+        'Persons\\Employees\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Persons/Employees',
+        ),
+        'Persons\\Customers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Persons/Customers',
+        ),
+        'Persons\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Persons',
+        ),
+        'Invoices\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Invoices',
+        ),
+        'FoodOrders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/FoodOrders',
+        ),
+        'FoodItems\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/FoodItems',
         ),
         'Carbon\\Doctrine\\' => 
         array (

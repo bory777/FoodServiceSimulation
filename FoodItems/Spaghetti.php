@@ -1,7 +1,12 @@
 <?php
+
+namespace FoodItems;
+
 class Spaghetti extends FoodItem {
+    const CATEGORY = 'Pasta';
+
     public function __construct() {
-        parent::__construct('spaghetti', 'トマトソースの美味しいイタリアンスパゲッティです。', 10.99);
+        parent::__construct('Spaghetti', 'トマトソースの美味しいイタリアンスパゲッティです。', 10.99);
     }
 
     public static function getCategory(): string {

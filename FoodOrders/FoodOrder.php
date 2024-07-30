@@ -1,4 +1,9 @@
 <?php
+
+namespace FoodOrders;
+
+use Carbon\Carbon;
+
 class FoodOrder {
     /**
      * @var FoodItem[]
@@ -6,8 +11,8 @@ class FoodOrder {
     private array $items;
     private Carbon $orderTime;
 
-    public function __construct(array $items = [], Carbon $orderTime) {
-        $this->item = $items;
+    public function __construct(array $items = []) {
+        $this->items = $items;
         $this->orderTime = Carbon::now();
     }
 
@@ -15,10 +20,10 @@ class FoodOrder {
      * @return FoodItems[]
      */
     public function getFoodItems(): array {
-        return $this->$items;
+        return $this->items;
     }
 
     public function getOrderTime(): Carbon {
-        return $this->$orderTime;
+        return $this->orderTime;
     }
 }

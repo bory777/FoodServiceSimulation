@@ -1,4 +1,7 @@
 <?php
+
+namespace Persons;
+
 class Person {
     protected string $name;
     protected int $age;
